@@ -1,4 +1,4 @@
-# Opdracht 2: Wachtwoord Validatie
+o# Opdracht 2: Wachtwoord Validatie
 
 ## Doel
 Leer werken met objecten en arrays in tests.

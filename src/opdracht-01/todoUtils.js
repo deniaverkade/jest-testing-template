@@ -1,4 +1,4 @@
-c/**
+/**
  * Controleert of een todo item geldig is
  */
 export function isValidTodo(text) {
