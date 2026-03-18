@@ -21,27 +21,35 @@ describe('Product Utils', () => {
     // TODO: Filter op category 'electronics'
     // TODO: Check of er 2 producten terugkomen
     // Hint: gebruik .toHaveLength(2)
-    expect(true).toBe(false); // Deze test faalt! Vervang met je eigen test
+    const result = filterByCategory("electronics");
+    expect(result).toBe(products.toHaveLength(2)); 
   });
 
   test('filterByCategory geeft lege array bij onbekende categorie', () => {
     // TODO: Filter op category 'clothing' (bestaat niet)
     // TODO: Check of de array leeg is
-    expect(true).toBe(false); // Deze test faalt! Vervang met je eigen test
+   const result = filterByCategory("clothing");
+   expect(result).not.toBe(products)
+   
+
   });
 
   test('searchProducts vindt producten met zoekterm', () => {
     // TODO: Zoek naar 'bureau'
     // TODO: Check of resultaat 1 product bevat
     // TODO: Check of dat product 'Bureau' heet
-    expect(true).toBe(false); // Deze test faalt! Vervang met je eigen test
+   const result = searchProducts("bureau");
+   expect(result).not.toBeLessThan(products.toHaveLength(1));
+   expect(result).toContain("bureau");
   });
 
   test('searchProducts is case insensitive', () => {
     // TODO: Zoek naar 'LAPTOP' (hoofdletters)
     // TODO: Check of het resultaat 'Laptop' bevat
     // Hint: gebruik .toHaveLength(1)
-    expect(true).toBe(false); // Deze test faalt! Vervang met je eigen test
+    const result = searchProducts("LAPTOP");
+    expect(result).not.toBeLessThan(products.toHaveLength(1));
+    expect(result).toContain("Laptop");
   });
 
 });
